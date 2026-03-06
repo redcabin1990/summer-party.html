@@ -1,153 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Summer Party Saree Solution | VarnaVastra</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Summer Party Saree</title>
 
 <style>
 
 body{
-margin:0;
-font-family:Arial, sans-serif;
-background:linear-gradient(135deg,#fdf6f0,#fff);
+font-family: Arial;
+background:linear-gradient(135deg,#fff5f0,#ffffff);
 text-align:center;
-color:#333;
-}
-
-.container{
-padding:40px 20px;
+padding:40px;
 }
 
 .logo{
-width:160px;
+width:150px;
 margin-bottom:20px;
 }
 
-.card{
-background:white;
-padding:30px;
-border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
-max-width:450px;
-margin:auto;
+.problem{
+font-size:22px;
+margin-top:40px;
 }
 
-h1{
-font-size:26px;
-margin-bottom:15px;
-}
-
-p{
-font-size:18px;
-line-height:1.6;
-}
-
-.btn{
-margin-top:25px;
-padding:15px 25px;
+button{
+background:#c84a63;
+color:white;
+padding:15px 30px;
 border:none;
 border-radius:30px;
-background:#d14b6a;
-color:white;
 font-size:18px;
+margin-top:30px;
 cursor:pointer;
 }
 
-.btn:hover{
-background:#b93c59;
+button:hover{
+background:#a83d53;
 }
 
-.solution{
+#solution{
 display:none;
-margin-top:20px;
+margin-top:40px;
 animation:fade 1s;
 }
 
 @keyframes fade{
-from{opacity:0; transform:translateY(20px)}
-to{opacity:1; transform:translateY(0)}
+from{opacity:0;}
+to{opacity:1;}
 }
 
-.insta{
+.solution-title{
+font-size:26px;
+color:#c84a63;
+margin-bottom:10px;
+}
+
+.instagram{
 display:inline-block;
 margin-top:20px;
-padding:12px 20px;
-background:#e1306c;
-color:white;
+background:#ffffff;
+color:#c84a63;
+border:2px solid #c84a63;
+padding:12px 25px;
 border-radius:25px;
 text-decoration:none;
 font-size:16px;
 }
 
-.sparkle{
-position:fixed;
-width:6px;
-height:6px;
-background:gold;
-border-radius:50%;
-animation:fall 3s linear infinite;
-}
-
-@keyframes fall{
-0%{transform:translateY(-10vh)}
-100%{transform:translateY(110vh)}
+.instagram:hover{
+background:#c84a63;
+color:white;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<div class="container">
-
 <img src="logo.png" class="logo">
 
-<div class="card">
+<div class="problem">
 
-<h1>Summer Party Tonight? ☀️</h1>
+Too hot for silk sarees in summer?<br><br>
 
-<p>
-Silk feels heavy…<br>
-Regular cotton feels too simple…
-</p>
+But still want a perfect party look?
 
-<button class="btn" onclick="showSolution()">Find the Solution</button>
+</div>
 
-<div class="solution" id="solution">
+<button onclick="showSolution()">
+Find the Solution
+</button>
 
-<h2>✨ VarnaVastra Cotton Party Sarees</h2>
+<div id="solution">
 
-<p>
+<div class="solution-title">
+✨ VarnaVastra Cotton Party Sarees
+</div>
+
 Comfort of cotton.<br>
 Elegance of a party look.
-</p>
 
-<a class="insta" href="https://instagram.com/varnavastra4you" target="_blank">
+<br><br>
+
+<a class="instagram"
+href="https://instagram.com/varnavastra4you"
+target="_blank">
+
 Explore on Instagram
+
 </a>
 
-</div>
-
-</div>
 </div>
 
 <script>
 
 function showSolution(){
 document.getElementById("solution").style.display="block";
-createSparkles();
-}
-
-function createSparkles(){
-for(let i=0;i<30;i++){
-let s=document.createElement("div");
-s.className="sparkle";
-s.style.left=Math.random()*100+"vw";
-s.style.animationDuration=(Math.random()*2+2)+"s";
-document.body.appendChild(s);
-}
 }
 
 </script>
