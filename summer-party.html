@@ -3,42 +3,51 @@
 <head>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Summer Party Saree</title>
+<title>VarnaVastra Summer Party</title>
 
 <style>
 
 body{
-font-family: Arial;
-background:linear-gradient(135deg,#fff5f0,#ffffff);
+font-family:Arial;
 text-align:center;
+margin:0;
 padding:40px;
+background:linear-gradient(135deg,#fff2ef,#fffdfb);
+overflow-x:hidden;
 }
+
+/* logo */
 
 .logo{
 width:150px;
-margin-bottom:20px;
+margin-bottom:30px;
 }
 
+/* problem text */
+
 .problem{
-font-size:22px;
-margin-top:40px;
+font-size:24px;
+line-height:1.5;
 }
+
+/* button */
 
 button{
 background:#c84a63;
 color:white;
-padding:15px 30px;
+padding:16px 35px;
 border:none;
 border-radius:30px;
 font-size:18px;
-margin-top:30px;
+margin-top:35px;
 cursor:pointer;
 }
 
 button:hover{
-background:#a83d53;
+background:#a63b51;
 }
+
+/* solution section */
 
 #solution{
 display:none;
@@ -46,32 +55,62 @@ margin-top:40px;
 animation:fade 1s;
 }
 
-@keyframes fade{
-from{opacity:0;}
-to{opacity:1;}
+.solution-title{
+font-size:28px;
+color:#c84a63;
+margin-bottom:15px;
 }
 
-.solution-title{
-font-size:26px;
-color:#c84a63;
-margin-bottom:10px;
+/* saree image */
+
+.saree{
+width:260px;
+margin-top:20px;
+opacity:0;
+transform:scale(0.7);
+transition:1s;
 }
+
+/* instagram button */
 
 .instagram{
 display:inline-block;
-margin-top:20px;
-background:#ffffff;
-color:#c84a63;
-border:2px solid #c84a63;
+margin-top:25px;
 padding:12px 25px;
 border-radius:25px;
+border:2px solid #c84a63;
 text-decoration:none;
+color:#c84a63;
 font-size:16px;
 }
 
 .instagram:hover{
 background:#c84a63;
 color:white;
+}
+
+/* animation */
+
+@keyframes fade{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+/* confetti */
+
+.confetti{
+position:fixed;
+width:10px;
+height:10px;
+top:-10px;
+opacity:0.8;
+animation:fall 3s linear infinite;
+}
+
+@keyframes fall{
+to{
+transform:translateY(100vh) rotate(360deg);
+}
 }
 
 </style>
@@ -97,13 +136,19 @@ Find the Solution
 <div id="solution">
 
 <div class="solution-title">
+
 ✨ VarnaVastra Cotton Party Sarees
+
 </div>
 
 Comfort of cotton.<br>
 Elegance of a party look.
 
-<br><br>
+<br>
+
+<img src="saree.jpg" class="saree" id="saree">
+
+<br>
 
 <a class="instagram"
 href="https://instagram.com/varnavastra4you"
@@ -118,7 +163,39 @@ Explore on Instagram
 <script>
 
 function showSolution(){
+
 document.getElementById("solution").style.display="block";
+
+let saree=document.getElementById("saree");
+
+setTimeout(()=>{
+saree.style.opacity=1;
+saree.style.transform="scale(1)";
+},300);
+
+startConfetti();
+
+}
+
+function startConfetti(){
+
+for(let i=0;i<60;i++){
+
+let conf=document.createElement("div");
+
+conf.className="confetti";
+
+conf.style.left=Math.random()*100+"vw";
+
+conf.style.background=
+["#ff4d6d","#ffd166","#06d6a0","#118ab2","#ef476f"][Math.floor(Math.random()*5)];
+
+conf.style.animationDuration=(Math.random()*3+2)+"s";
+
+document.body.appendChild(conf);
+
+}
+
 }
 
 </script>
