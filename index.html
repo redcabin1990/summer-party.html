@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,50 +11,92 @@
 
 body{
 margin:0;
-font-family:Arial, sans-serif;
-background:linear-gradient(135deg,#fff5f0,#ffffff);
+font-family: "Segoe UI", sans-serif;
+background:linear-gradient(135deg,#f8f4f1,#fffdfb);
 text-align:center;
 color:#333;
 }
 
+/* container */
+
 .container{
-padding:60px 20px;
+padding:80px 20px;
+animation:fadein 1.5s;
 }
 
+/* logo */
+
 .logo{
-width:180px;
+width:200px;
 margin-bottom:20px;
 }
 
+/* heading */
+
 h1{
-font-size:32px;
+font-size:40px;
 margin-bottom:10px;
+letter-spacing:1px;
 }
 
-p{
-font-size:18px;
-margin-bottom:30px;
+.tagline{
+font-size:20px;
+color:#555;
+margin-bottom:40px;
 }
+
+/* buttons */
 
 .btn{
 display:inline-block;
-padding:15px 30px;
-background:#d14b6a;
-color:white;
-text-decoration:none;
-border-radius:30px;
+padding:16px 35px;
+margin:12px;
+border-radius:40px;
 font-size:18px;
-margin:10px;
+text-decoration:none;
+transition:0.3s;
 }
 
-.btn:hover{
-background:#b93c59;
+.btn-main{
+background:#c84a63;
+color:white;
 }
+
+.btn-main:hover{
+background:#a73c52;
+}
+
+.btn-instagram{
+background:white;
+color:#c84a63;
+border:2px solid #c84a63;
+}
+
+.btn-instagram:hover{
+background:#c84a63;
+color:white;
+}
+
+/* footer */
 
 .footer{
-margin-top:40px;
+margin-top:60px;
 font-size:14px;
-color:#777;
+color:#888;
+}
+
+/* animation */
+
+@keyframes fadein{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 </style>
@@ -66,21 +109,20 @@ color:#777;
 
 <img src="logo.png" class="logo">
 
-<h1>Welcome to VarnaVastra</h1>
+<h1>VarnaVastra</h1>
 
-<p>
-Comfort of Cotton.  
-Elegance for Every Occasion.
-</p>
+<div class="tagline">
+Comfort of Cotton. Elegance for Every Occasion.
+</div>
 
-<a class="btn" href="summer-party.html">
-Summer Party Saree Solution
+<a class="btn btn-main" href="summer-party.html">
+Explore Summer Party Sarees
 </a>
 
 <br>
 
-<a class="btn" href="https://instagram.com/varnavastra4you" target="_blank">
-Visit Instagram
+<a class="btn btn-instagram" href="https://instagram.com/varnavastra4you" target="_blank">
+Follow us on Instagram
 </a>
 
 <div class="footer">
